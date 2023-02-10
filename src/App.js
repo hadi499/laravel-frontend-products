@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import PrivateRoute from "./utils/PrivateRoute";
+import { AuthContext } from "./context/authContext";
+import { useContext } from "react";
+import AddProduct from "./components/AddProduct";
+import Register from "./components/Register";
+import DetailProduct from "./components/DetailProduct";
+import EditProduct from "./components/EditProduct";
 
 function App() {
+  const { currentUser } = useContext(AuthContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route element={<PrivateRoute />}>
+          <Route path="/" element={<Home />} />
+          <Route path="add" element={<AddProduct />} />
+          <Route path="detail/:id" element={<DetailProduct />} />
+          <Route path="edit/:id" element={<EditProduct />} />
+        </Route>
+        <Route
+          path="login"
+          element={currentUser ? <Navigate to="/" /> : <Login />}
+        />
+        <Route path="register" element={<Register />} />
+      </Routes>
+    </Router>
   );
 }
 

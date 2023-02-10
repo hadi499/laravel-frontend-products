@@ -1,0 +1,139 @@
+.login {
+    display: flex;
+    justify-content: center;
+
+    .myform {
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            display: block;
+            margin-top: 5px;
+            height: 20px;
+        }
+
+        small {
+            display: block;
+        }
+
+        button {
+            margin-top: 15px;
+            cursor: pointer;
+            padding: 4px 8px
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+    }
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+
+    .myform {
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            display: block;
+            margin-top: 5px;
+            height: 20px;
+        }
+
+        button {
+            margin-top: 15px;
+            cursor: pointer;
+            padding: 4px 8px
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+    }
+}
+
+.edit {
+    display: flex;
+    justify-content: center;
+
+    .myform {
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            display: block;
+            margin-top: 5px;
+            height: 20px;
+        }
+
+        button {
+            margin-top: 15px;
+            cursor: pointer;
+            padding: 4px 8px
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+    }
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+
+
+    .main {
+
+        margin: 30px;
+
+        .link {
+            text-decoration: none;
+        }
+
+        .add {
+            margin-bottom: 15px;
+            padding: 6px 8px;
+            background-color: aquamarine;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            font-weight: 700;
+        }
+
+        .layout {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .card {
+                border: 1px solid gray;
+                background-color: beige;
+                padding: 0px 10px;
+
+
+                button {
+                    margin-right: 15px;
+                    cursor: pointer;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+
+}
